@@ -1,48 +1,233 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <!-- <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
+    </ion-buttons> -->
+    <!-- <ion-title>
       Home
-    </ion-title>
+    </ion-title> -->
+
+    <img
+      style="width: 150px;"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAV4AAAB9CAMAAADduvsEAAAAw1BMVEX///8znjVbvyEnmkxlvU6
+      IiIjJ5tLY7tNPrW339/dpuGs0oFfk8ukLlESy4ZeQkJDn5+e738eH0FzP6seg07Cg0qFuwVi74rGByW/s9+mYmJioqKhmwzBBpELf3
+      9/Hx8e95abT7sR8zE1cs3j0+/DW7Neu2bzp9uGt2K5quYN3wI+FxYZxyD+4uLjF5ryd2Xp4xWROq1BcsV2737yV0YVBpmKLzXqo3Yme
+      1pCo2pt3vniFxpqS1GuSy5PI6rWTzKVbt4KYAbnwAAALjklEQVR4nO2dCVviOhSGK7VAoYqAqCyyGUQZcR3HBZX5/7/qZjlZ2qYlVbQ
+      DN9/zzDXNaUt4e3pykqZcx7GysrKysrKysrKysrKysrKysrKysrKysrKysrL6opaLwPHPy+XSLtNJ3g3aKhVd163if+Um4L3Nu0VbpO
+      Dw3GUSeJ/zbtP2qFgtx/Da4LA2PbpxvLfF8uUSEas/Ky+DvJu4waq7Wrxki2AlBfdscR44pVKpOc27tRuns0S8rjubMLxEpd0jG5Szyl
+      +4KXhxjYIXV9ugnE3nh1j14JDpvH3M1BQ1ooBw9XWpmXeDN0jBJdOy9JvpZQI1C26aTcH0TGtmeTd5kyRiwjXPx+pQ88hjQpWP43ZZzXn
+      ebd4cHabgrSfgrdokzVCz8ifwumU/73Zvhg7dT+F1l3k3fCMUVD+J9zHvlm+EZu4n8bp5t3wjtAJvUuaAFdjwsFr1s7NF8YxpUfrD9DKBml
+      kAhcspmH6LGmST39Uq4aFZfIyGoOZaFOIm/zDvtm+AnnEoEDEhPufAY8JRaM6BKrBji9U6ScfbTMNr+a4S2v0KXteO3dJ1/DW8i7zb/4/r9m
+      t4Xdu9peqreN2ZnXtI0clX8bqPk7y/wz+sP3q8YpVOLDGrTiN47eRDmlC7jfwA5LSZkCxETW1ZIwr8RPl+k39S16rTCjeOPcrUzTnwgtN2/CY
+      enuzm/V3+Rb18GW+bPprfKrxo2OgVCuPGUGOb7lOZLvU4ScObMiGp4IX4nKX9F78qO1j3lVaOD51HBaJGrL40LhQSTPygwsjwM47XhffF+Gu1f+0oumsh4yPXqzdGqhSt53TXgRe9rAmvadeG3nciusvHg6cA8SZSPyysEa/uQfxn8Jqui0L3UbpY78aNXaP2AWIvcve8rRevfxnB+ydj10ZlGOu1dHdaxo1do644xaGufvwxGu5rjsqMlz4S4nhvj8lN/icz3j+GHyXpVrCg+CtDW9cmGQOuwgZWuc5VoMV6vV6coCZfWopLRCVUZypCRbPkQ03d4SaHGgy7Jx53Ty/Y9gUhfL/Gb2KuhsAbcUVW9+2ff1i+nJSZzkQh4AV0AkJks2h2yjbQfZVXo3V6KjaY0aHUK7xy8k4vwa+H6Mk0Bn4C9I7vkvv3tN6WdWw9TecWxiu2hg0Wi2P00fAGX6pe4+lDOfv+G0mdC+O3/STHC5QnxSImFMMxYZdNPpg+NYaM7FWtm8hJIaCDCDbA2+YBJJpgaA1wgslp+B7R6YlS2md8JQLe34muDWiiBu/qonjhFDTKAOD9K/UsugjukBXpcp1DOl7TaXUEOJIuKNCh4Bjeh1O1B1Ro6Q1sayJtMZcXolB6zk2EQBLehsgkwnjRWD0A7oO3UF1hrG3AuSle44cWFzFKYYF5R+B9CCcY8sgEAzitrD9NupKsY3tySsztRH0C3qHYDuOd9gph7cuTr/DfpSFe80cWLDacJtrBuQXedshFyaEQTZMMOzElXUrmdFNeEGEzAe+VHm/Ed7Gj0ss5jdRq05BLM7zGcB1214vI224pitEheOFy4FEzumBAIYVLMvCD7ys8AXyNt4KoJHAxT3tbgVduh/DC3r2nj9E+CR9XiF+88dNwNBo9XSW7b9UIr/lUA//2fAzRVGlG8L62LkSewbo+CKjUSxMNcDSJuE1WfadvCQu5Q1xCvah/qfxUvG/7w4gZjh2zg0e9Hp++GPHTgXtHx91ES5PM4bchWQXfaryQt72Hdm/JrUSD+gEt5cRRIejYiKKdWwLeNxQ3M8/vcZal2OQQjxO60bWzXAYzpkWsMEPPRFl81xgvH8RVpFs63GVfUw2qV7dT8LKb+omW2Si3J41avDc681vinS81Dp0trGDBtGy/gBAv+NSQbSHJXYheEl6Rt7HNChf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"
+      alt=""
+      srcset=""
+    />
+
+    <!-- <img
+      style="width: 150px;"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8BFYjtEwW6-IPw8teM-pu5vcN1iG1RPhLcHl0RyznLmoi8U0_fw&s"
+      alt=""
+    /> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card class="welcome-card">
-    <img src="/assets/shapes.svg" alt=""/>
     <ion-card-header>
-      <ion-card-subtitle>Get Started</ion-card-subtitle>
-      <ion-card-title>Welcome to Ionic</ion-card-title>
+      <ion-card-subtitle>Fly anywhere</ion-card-subtitle>
+      <ion-card-title>Welcome Green Africa </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>
-        Now that your app has been created, you'll want to start building out features
-        and components. Check out some of the resources below for next steps.
-      </p>
+      <form
+        [formGroup]="searchForm"
+        class="flight_form"
+        (ngSubmit)="addPost(searchForm.value)"
+      >
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="Enter depature city"
+            [matAutocomplete]="auto"
+            formControlName="depart"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="Enter arrival city"
+            [matAutocomplete]="auto"
+            formControlName="arrive"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            [matDatepicker]="picker1"
+            placeholder="Depart date"
+            formControlName="departDate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker1"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            [matDatepicker]="picker2"
+            placeholder="Return Date"
+            formControlName="arriveDate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker2"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+
+        <mat-autocomplete #auto>
+          <mat-option *ngFor="let option of cities" [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+        &nbsp;
+        <button
+          [disabled]="!searchForm.valid"
+          mat-raised-button
+          color="primary"
+          (click)="searchFlights()"
+        >
+          Search
+        </button>
+      </form>
     </ion-card-content>
   </ion-card>
 
-  <ion-list lines="none">
-    <ion-list-header>
-      <ion-label>Resources</ion-label>
-    </ion-list-header>
-    <ion-item href="https://ionicframework.com/docs/">
-      <ion-icon slot="start" color="medium" name="book"></ion-icon>
-      <ion-label>Ionic Documentation</ion-label>
-    </ion-item>
-    <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-      <ion-icon slot="start" color="medium" name="build"></ion-icon>
-      <ion-label>Scaffold Out Your App</ion-label>
-    </ion-item>
-    <ion-item href="https://ionicframework.com/docs/layout/structure">
-      <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-      <ion-label>Change Your App Layout</ion-label>
-    </ion-item>
-    <ion-item href="https://ionicframework.com/docs/theming/basics">
-      <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-      <ion-label>Theme Your App</ion-label>
-    </ion-item>
+  <ion-list>
+    <ng-container *ngIf="flights$ | async as flights; else elseBlock">
+      <ng-container *ngIf="flights.length > 0; else elseBlock2">
+        <ion-card>
+          <ion-card-content>
+            <ion-item
+              class="flight_list"
+              *ngFor="let item of flights"
+              [href]="item.href"
+            >
+              <ion-icon name="airplane" slot="start"></ion-icon>
+              <p>{{item.time}} &nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <p>
+                {{item.price | currency}} &nbsp;&nbsp;&nbsp;&nbsp;
+              </p>
+
+              <button mat-raised-button slot="end" (click)="book()">
+                Book
+              </button>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ng-container>
+
+      <ng-template #elseBlock2>
+        <ion-list>
+          <ion-list-header>
+            <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+          </ion-list-header>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-avatar>
+            <ion-label>
+              <h3>
+                <ion-skeleton-text
+                  animated
+                  style="width: 50%"
+                ></ion-skeleton-text>
+              </h3>
+              <p>
+                <ion-skeleton-text
+                  animated
+                  style="width: 80%"
+                ></ion-skeleton-text>
+              </p>
+              <p>
+                <ion-skeleton-text
+                  animated
+                  style="width: 60%"
+                ></ion-skeleton-text>
+              </p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+            <ion-label>
+              <h3>
+                <ion-skeleton-text
+                  animated
+                  style="width: 50%"
+                ></ion-skeleton-text>
+              </h3>
+              <p>
+                <ion-skeleton-text
+                  animated
+                  style="width: 80%"
+                ></ion-skeleton-text>
+              </p>
+              <p>
+                <ion-skeleton-text
+                  animated
+                  style="width: 60%"
+                ></ion-skeleton-text>
+              </p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-skeleton-text
+              animated
+              style="width: 27px; height: 27px"
+              slot="start"
+            ></ion-skeleton-text>
+            <ion-label>
+              <h3>
+                <ion-skeleton-text
+                  animated
+                  style="width: 50%"
+                ></ion-skeleton-text>
+              </h3>
+              <p>
+                <ion-skeleton-text
+                  animated
+                  style="width: 80%"
+                ></ion-skeleton-text>
+              </p>
+              <p>
+                <ion-skeleton-text
+                  animated
+                  style="width: 60%"
+                ></ion-skeleton-text>
+              </p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ng-template>
+    </ng-container>
+    <ng-template #elseBlock>
+      <ion-card class="welcome-card">
+        <ion-card-content>
+          <ion-card-header>
+            <ion-card-title>
+              No destination selected yet
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
   </ion-list>
 </ion-content>

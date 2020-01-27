@@ -1,0 +1,25 @@
+<ion-card-header>
+  <ion-toolbar>
+    <ion-button fill="cler" color="dark" slot="end" (click)="closeModal()">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-card-header>
+
+<ion-content>
+  <ion-card *ngIf="fireState$ | async as fireState">
+    <ion-card-header>
+      <ion-card-subtitle
+        >Waiting for food confirmation, please do not close this page
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-spinner
+        *ngIf="fireState.state === true; else elseBlock"
+      ></ion-spinner>
+      <ng-template #elseBlock>
+        <h3>Order confirmed</h3>
+      </ng-template>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
